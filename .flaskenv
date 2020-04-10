@@ -1,0 +1,2 @@
+FLASK_APP=url_shortener
+FLASk_ENV=development
