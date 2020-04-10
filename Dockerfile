@@ -12,6 +12,7 @@ RUN apt-get install -y python3-dev
 RUN pip3 install pymongo
 RUN pip3 install Flask
 RUN pip3 install flask_pymongo
+RUN pip3 install python-dotenv
 
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
