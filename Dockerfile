@@ -6,6 +6,7 @@ WORKDIR /lab1
 COPY . /lab1
 
 RUN apt-get update && apt-get install -y python3 
+RUN apt-get install -y locales locales-all
 RUN apt-get install -y python3-pip
 RUN apt-get install -y python3-dev
 RUN pip3 install pymongo
