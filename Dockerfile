@@ -12,4 +12,7 @@ RUN pip3 install pymongo
 RUN pip3 install Flask
 RUN pip3 install flask_pymongo
 
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
+
 CMD flask run --host='0.0.0.0' --port=80
