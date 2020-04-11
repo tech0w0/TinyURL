@@ -2,42 +2,143 @@
       <head>
          <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
          <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+         <style>
+            body {
+               background: rgb(2,0,36);
+               background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,121,99,1) 35%, rgba(0,212,255,1) 100%);
+               font-family: 'Varela', sans-serif;
+            }
+            h1 {
+              font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+              font-size: 30px;
+              padding: 40px 25px;
+              text-align: center;
+              text-transform: uppercase;
+              text-rendering: optimizeLegibility;
+            }
+              h1.retroshadow {
+                 color: #2c2c2c;
+                 letter-spacing: 0.05em;
+                 text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+               }
+
+            input[type=text] {
+              display: block;
+              margin : 0 auto;
+              width: 700px;
+              height: 60px;
+              padding: 12px 20px;
+              margin: 8px 0;
+              box-sizing: border-box;
+              border: none;
+              background-color: #172018;
+              color: white;
+              border-radius: 4px;
+            }
+
+            .container {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+            }
+            .container>*:second-child {
+                align-self: stretch;
+            }
+
+            .response {
+                font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+                font-size: 20px;
+                background-color: #172018;
+                color: white;
+                border-radius: 4px;
+                flex: 1;
+                width: 1000px;
+                height: 100px;
+                text-align: center;
+                margin: auto;
+                padding: 35px;
+            }
+            button,
+            button::after {
+              -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+              -o-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+
+            button {
+              background: none;
+              border: 3px solid #172018;
+              border-radius: 5px;
+              color: #172018;
+              display: block;
+              font-size: 1.6em;
+              font-weight: bold;
+              margin: 1em auto;
+              height: 70px;
+              width: 300px;
+              position: relative;
+              text-transform: uppercase;
+              height: 50px;
+            }
+
+            button::before,
+            button::after {
+              background: #172018;
+              content: '';
+              position: absolute;
+              z-index: -1;
+            }
+
+            button:hover {
+              color: #4bc7b6;
+            }
+            /* BUTTON 2 */
+            .btn-2::after {
+              height: 100%;
+              left: 0;
+              top: 0;
+              width: 0;
+            }
+
+            .btn-2:hover:after {
+              width: 100%;
+            }
+         </style>
       </head>
       <body>
          <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+
                <div class="navbar-header">
-                  <a class="navbar-brand" href="#">URL Shortener</a>
+                  <a class="navbar-brand" href="#" >URL Shortener</a>
                </div>
                <div id="navbar" class="navbar-collapse collapse">
                </div>
                <!--/.navbar-collapse -->
-            </div>
+
          </nav>
-         <div class="jumbotron">
-            <div class="container">
-               <br />
+
+         <div class="jumbotron" style="background: transparent; text-align: center">
+             <div class="container">
                {% if not short_url %}
-               <div class="row">
-                  <div class="col-md-offset-5 col-md-3">
-                     <h4>Enter URL to shorten.</h4>
-                     <form method="post" class="navbar-form navbar-right" action="">
-                        <div class="form-group">
-                           <input type="text" id="url" name="url" class="form-control input-lg chat-input" placeholder="URL" />
-                           <button type="submit" class="btn btn-lg btn-info">Submit</button>
+                     <h1 style="flex:1" class='retroshadow'>Enter URL: </h1>
+                    <p style="text-align: left; width: 700px; margin-left: 30px"><b>Instructions:</b> <br> Insert a long URL in the box below or insert the last 5 characters of the short link generated before.</p>
+                     <form method="post" class="navbar-form navbar-right" action="" style="flex: 2">
+                         <div class="form-group" >
+                           <input type="text" id="url" name="url" placeholder="URL" />
+                             <button type="submit" class="btn-2" >Submit</button>
                         </div>
                      </form>
-                  </div>
-               </div>
                {% else %}
-               <div>
-                  Enjoy, your shortened URL is: <a href="{{short_url}}"> {{short_url}}</a>
-               </div>
+                 <h1 class='retroshadow'>Find your URL below: </h1>
+                 <div class="response">
+                    Enjoy, your URL is: <a href="{{short_url}}"> {{short_url}}</a>
+                 </div>
+                 <button class="btn-2" onclick="window.location.href=window.location.href">Go Back</button>
                {% endif %}
             </div>
          </div>
-     
-         </div> 
+
+         </div>
       </body>
    </html>
-
