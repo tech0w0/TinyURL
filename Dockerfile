@@ -1,14 +1,24 @@
 
-FROM ubuntu:latest
+FROM alpine:latest
 
 WORKDIR /lab1
 
 COPY . /lab1
 
-RUN apt-get update && apt-get install -y python3 
-RUN apt-get install -y locales locales-all
-RUN apt-get install -y python3-pip
-RUN apt-get install -y python3-dev
+RUN apk upgrade --no-cache 
+RUN apk add --no-cache \
+	python3 \
+	python3-dev \
+    && pip3 install --no-cache-dir --upgrade pip \
+    && rm -rf /var/cache/* \
+    && rm -rf /root/.cache/*
+ 
+
+RUN cd /usr/bin \
+  # && ln -sf easy_install-3.5 easy_install \
+  && ln -sf python3 python \
+  && ln -sf pip3 pip
+
 RUN pip3 install pymongo
 RUN pip3 install Flask
 RUN pip3 install flask_pymongo
