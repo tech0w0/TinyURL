@@ -1,7 +1,7 @@
 version: "3"
 services:
  url:
-    image: csagan/lab1:firsttry
+    image: csagan/lab1:lab2
     container_name: url_hash
     ports:
       - "80:80"

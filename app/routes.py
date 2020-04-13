@@ -4,9 +4,8 @@ from app import app
 import hashlib
 
 url = ''
-client = MongoClient('mongodb://localhost:27017')
+client = MongoClient('mongodb://mongodb:27017')
 db = client.urls
-host = 'http://localhost:80/'
 table = db.links
 
 @app.route('/', methods=['GET', 'POST'])
@@ -23,7 +22,7 @@ def home():
                 'hash': hash[:5]
             }
             table.insert_one(post_data)
-            return render_template('index.html', short_url=host + hash[:5])
+            return render_template('index.html', short_url = request.base_url + hash[:5])
         elif not data:
             return render_template('index.html')
         else:

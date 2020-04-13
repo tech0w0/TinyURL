@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e8640e9-4260-4bd5-85b5-6b735484859f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3e8640e9-4260-4bd5-85b5-6b735484859f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab4-2/calculator.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab4" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -49,11 +47,11 @@
       <screen x="0" y="27" width="1920" height="908" />
     </state>
     <state x="697" y="286" width="546" height="396" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.908@0.27.1920.908" timestamp="1586509781078" />
-    <state x="743" y="239" width="424" height="491" key="FileChooserDialogImpl" timestamp="1586631148676">
+    <state x="743" y="239" width="424" height="491" key="FileChooserDialogImpl" timestamp="1586685627038">
       <screen x="0" y="27" width="1920" height="908" />
     </state>
     <state x="706" y="253" key="FileChooserDialogImpl/0.27.1825.968@0.27.1825.968" timestamp="1586528321210" />
-    <state x="743" y="239" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.908@0.27.1920.908" timestamp="1586631148675" />
+    <state x="743" y="239" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.908@0.27.1920.908" timestamp="1586685627038" />
     <state x="620" y="308" key="com.intellij.ide.util.TipDialog" timestamp="1586510247237">
       <screen x="0" y="27" width="1920" height="908" />
     </state>
